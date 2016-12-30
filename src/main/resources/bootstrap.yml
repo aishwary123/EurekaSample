@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: lab-4-subject
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+    
+---
+spring:
+  profiles: Subject1
+words: I,We,You,They
+
+---
+spring:
+  profiles: Subject2
+words: Nishant,Sandeep,Aishwary
+
+
